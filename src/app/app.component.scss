@@ -1,0 +1,35 @@
+// CSS for all screens resolution
+.container-fluid {
+  margin-left: 0;
+  padding-left: 0;
+  background-color: #f6f8fa;
+  min-height: 100vh;
+  padding-right: 18px;
+
+  .routers {
+    margin-left: 155px;
+    padding: 3px 0 3px 0;
+
+  }
+}
+
+// CSS for screens more than 991px
+@media (min-width: 991.5px) {
+
+  .container-fluid {
+    min-width: 1440px;
+  }
+}
+
+// CSS for screens less than 576px
+@media (max-width: 575.5px) {
+  .container-fluid {
+    padding-right: 0;
+
+    .routers {
+      margin-left: 0px;
+      padding: 0px 0px 0px 0px;
+    }
+  }
+
+}

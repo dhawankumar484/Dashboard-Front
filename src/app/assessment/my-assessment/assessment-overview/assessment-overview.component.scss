@@ -1,0 +1,447 @@
+// Assessment Overview CSS for all screen resolutions
+
+// Assessment Overview Header
+.header {
+  color: #1c4980;
+  margin: 21.5px 0px 0px -23.5px;
+
+  h5 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+// Assessment Information Container
+.info-container {
+  border: 1.6px solid #ebecee;
+  border-radius: 13px;
+  margin-top: 16px;
+
+  // Total Assessments
+  .total-assess {
+    padding: 1rem;
+    border-right: 1px solid #ebecee;
+    padding: 12.5px 20px 16px 19px;
+
+    p {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0.2rem 0 0.27rem 0;
+      color: #1c4980;
+    }
+
+    fa-icon,
+    i {
+      font-size: 1rem;
+      margin: 0 0.65rem 0px 0;
+      padding: 0.7rem 0.7rem 0.6rem 0.8rem;
+      border: 1px none blue;
+      border-radius: 9px;
+      background-color: #ebe8fd;
+      color: #7f68f1;
+      -webkit-text-stroke: 0.9px;
+    }
+
+    span {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #1c4980;
+    }
+  }
+
+  // Candidates
+  .candidates {
+    padding: 1rem;
+    border-right: 1px solid #ebecee;
+    border-left: 1px solid #ebecee;
+    padding: 16px 20px 16px 20px;
+
+    h6 {
+      font-size: 14px;
+      font-weight: 600;
+      padding: 0.088rem 0 1.28rem 0;
+      color: #1c4980;
+    }
+
+    fa-icon,
+    i {
+      font-size: 0.9rem;
+      margin: 0 0.65rem 0 0;
+      padding: 0.7rem 0.75rem 0.7rem 0.7rem;
+      border: 1px none blue;
+      border-radius: 9px;
+      background-color: #ebe8fd;
+      color: #6649ee;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1c4980;
+      margin-bottom: 0px;
+      margin-right: 0px;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 500;
+      color: #1c4980;
+      margin-right: 0px;
+    }
+  }
+
+  // Candidates Source
+  .candidates-source {
+    padding: 14px;
+    border-right: 1px solid #ebecee;
+    border-left: 1px solid #ebecee;
+    padding: 16px 20px 16px 21px;
+
+    h6 {
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 0.088rem 0 1.28rem 0;
+      color: #1c4980;
+    }
+
+    fa-icon,
+    i {
+      font-size: 1.1rem;
+      margin: 0 0.65rem 0 0;
+      padding: 0.6rem 0.7rem 0.6rem 0.7rem;
+      border: 1px none blue;
+      border-radius: 9px;
+      background-color: #fce8ef;
+      color: #e9447d;
+      -webkit-text-stroke: 0.5px;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      color: #1c4980;
+      margin-bottom: 0px;
+      margin-right: 0px;
+    }
+
+    span {
+      font-size: 0.73rem;
+      font-weight: 500;
+      color: #1c4980;
+      margin-right: 0px;
+    }
+  }
+
+  // Total Purpose   
+  .total-purpose {
+    padding: 14px;
+    border-left: 1px solid #ebecee;
+    padding: 16px 20px 16px 20px;
+
+    h6 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.088rem 0 0.9rem 0;
+      color: #1c4980;
+    }
+
+    fa-icon,
+    i {
+      font-size: 0.95rem;
+      margin: 0 0.65rem 0 0;
+      padding: 0.68rem 0.7rem 0.65rem 0.7rem;
+      border: 1px none blue;
+      border-radius: 9px;
+      background-color: #e5f1fc;
+      color: #2487e9;
+      -webkit-text-stroke: 0.9px;
+    }
+
+    span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1c4980;
+    }
+  }
+}
+
+// My Assessment CSS for screen resolutions more than 991px
+@media (min-width: 992px) {
+
+  // Assessment Information Container
+  .info-container {
+    width: 1224px;
+
+    // Total Assessments
+    .total-assess {
+      width: 162px;
+    }
+
+    // Candidates
+    .candidates {
+      width: 371px;
+
+      .icon {
+        width: 60px;
+      }
+
+      .total-candidates {
+        width: 120px;
+        border-right: 1.4px solid #ebecee;
+        padding-right: 0px;
+        margin-right: 11.5px;
+      }
+
+      .candidates-attemped {
+        width: 120px;
+      }
+    }
+
+    // Candidates source
+    .candidates-source {
+      width: 501px;
+
+      .icon {
+        width: 44.5px;
+      }
+
+      .email {
+        width: 127px;
+        border-right: 1.4px solid #ebecee;
+        padding-right: 0px;
+        margin-left: 15px;
+        margin-right: 7px;
+      }
+
+      .social-share {
+        width: 104px;
+        border-right: 1.4px solid #ebecee;
+        padding-right: 0px;
+        margin-right: 7px;
+      }
+
+      .unique-link {
+        width: 115px;
+      }
+    }
+
+    // Total Purpose
+    .total-purpose {
+      width: 187px;
+    }
+  }
+}
+
+// My Assessment CSS for screen resolutions less than 991px
+@media (max-width: 991px) {
+
+  // Assessment Information Container
+  .info-container {
+
+    // Total Assessments
+    .total-assess {
+      padding: 12.5px 20px 16px 19px;
+    }
+
+    // Candidates
+    .candidates {
+      padding: 16px 20px 16px 22px;
+      border-top: 1.5px solid #ebecee;
+      border-right: 0px;
+      border-left: 0px;
+
+      .total-candidates {
+        border-right: 1.4px solid #ebecee;
+      }
+    }
+
+    // Candidates Source
+    .candidates-source {
+      padding: 16px 20px 16px 22px;
+      border-top: 1.5px solid #ebecee;
+      border-left: 0px;
+      border-right: 0px;
+
+      .email {
+        border-right: 1.4px solid #ebecee;
+      }
+
+      .social-share {
+        border-right: 1.4px solid #ebecee;
+      }
+    }
+
+    // Purpose
+    .total-purpose {
+      padding: 16px 20px 16px 20px;
+    }
+  }
+}
+
+// CSS for screen resolutions more than 767px and less than 992px
+@media only screen and (min-width: 767.5px) and (max-width: 991px) {
+
+  // Assessment Information Container
+  .info-container {
+
+    // Total Assessments
+    .total-assess {
+
+      span {
+        margin-left: 30px;
+      }
+    }
+
+    // Candidates
+    .candidates {
+
+      .icon {
+        width: 80px;
+      }
+
+      .total-candidates {
+        width: 140px;
+      }
+
+      .candidates-attemped {
+        width: 140px;
+        margin-left: 16px;
+      }
+    }
+
+    // Candidates source
+    .candidates-source {
+
+      .icon {
+        width: 80px;
+      }
+
+      .email {
+        width: 140px;
+      }
+
+      .social-share {
+        width: 120px;
+        margin-left: 16px;
+      }
+
+      .unique-link {
+        width: 115px;
+        margin-left: 16px;
+      }
+    }
+
+    // Total Purpose
+    .total-purpose {
+
+      span {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+// CSS for screen resolutions less than 678px
+@media (max-width: 767.5px) {
+
+  // Assessment Information Container
+  .info-container {
+
+    // Total Assessments
+    .total-assess {
+
+      span {
+        margin-left: 10px;
+      }
+    }
+
+    // Total Purpose
+    .total-purpose {
+
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+// CSS for screen resolutions less than 375px
+@media (max-width: 375px) {
+
+  // Assessment Information Container
+  .info-container {
+
+    // Total Assessments
+    .total-assess {
+      padding: 12.5px 12px 13px 13px;
+
+      span {
+        margin-left: 0px;
+      }
+    }
+
+    // Candidates
+    .candidates {
+      padding: 16px 10px 13px 13px;
+
+      .icon {
+        width: 75px;
+      }
+
+      .total-candidates {
+        width: 115px;
+        padding-bottom: 10px;
+        border-right: none !important;
+        border-bottom: 1.4px solid #ebe8fd;
+      }
+
+      .candidates-attemped {
+        width: 115px;
+        margin-left: 75px;
+        margin-top: 20px;
+      }
+    }
+
+    // Candidates Source
+    .candidates-source {
+      padding: 16px 10px 13px 13px;
+
+      .icon {
+        width: 75px;
+      }
+
+      .email {
+        width: 115px;
+        padding-bottom: 10px;
+        border-right: none !important;
+        border-bottom: 1.4px solid #ebe8fd;
+      }
+
+      .social-share {
+        width: 115px;
+        margin-left: 75px;
+        margin-top: 20px;
+        padding-bottom: 10px;
+        border-right: none !important;
+        border-bottom: 1.4px solid #ebe8fd;
+      }
+
+      .unique-link {
+        width: 115px;
+        margin-left: 75px;
+        margin-top: 20px;
+      }
+    }
+
+    // Total Purpose
+    .total-purpose {
+      padding: 16px 10px 13px 13px;
+
+      span {
+        margin-left: 0px;
+      }
+    }
+
+  }
+
+}

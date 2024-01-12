@@ -1,0 +1,94 @@
+<!-- Assessment Overview Header -->
+<div class="row d-none d-sm-block header">
+  <h5>Assessments Overview</h5>
+</div>
+
+<!-- Assessment Information container -->
+<div class="row info-container">
+
+  <!-- Total Assessment -->
+  <div class="col-6 col-lg-2 order-1 total-assess">
+    <div>
+      <p>Total Assessment</p>
+    </div>
+    <div>
+      <i class="bi bi-view-stacked"></i>
+      <span>{{totalAssessment}}</span>
+    </div>
+  </div>
+
+  <!-- Candidates -->
+  <div class="col-12 col-lg-2 order-3 order-lg-2 candidates">
+    <div>
+      <h6>Candidates</h6>
+    </div>
+    <div class="row d-flex">
+      <div class="col-2 icon">
+        <fa-icon [icon]="this.iconService.faUserGroup"></fa-icon>
+      </div>
+      <div class="col-4 col-md-3 total-candidates">
+        <div class="row" style="margin-top: -12px;">
+          <p>11,145<span class="ms-1" style="color: #3ecf88;">+89</span></p>
+        </div>
+        <div class="row">
+          <span>Total Candidate</span>
+        </div>
+      </div>
+      <div class="col-4 col-md-3 candidates-attemped">
+        <div class="row pe-0 me-0" style="margin-top: -12px;">
+          <p>1,14<span class="ms-1" style="color: #3ecf88;">+89</span></p>
+        </div>
+        <div class="row">
+          <span>Who Attempted</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Candidates Source -->
+  <div class="col-12 col-lg-2 order-4 order-lg-3 candidates-source">
+    <div>
+      <h6>Candidates Source</h6>
+    </div>
+    <div class="row d-flex">
+      <div class="col-2 icon">
+        <i class="bi bi-globe2"></i>
+      </div>
+      <div class="col-4 col-md-3 email">
+        <div class="row" style="margin-top: -12px;">
+          <p>11,000<span class="ms-1" style="color: #3ecf88;">+89</span></p>
+        </div>
+        <div class="row">
+          <span>E-mail</span>
+        </div>
+      </div>
+      <div class="col-3 col-md-3 social-share">
+        <div class="row" style="margin-top: -12px;">
+          <p>{{socialShare}}<span class="ms-1" style="color: #3ecf88;">+89</span></p>
+        </div>
+        <div class="row">
+          <span>Social Share</span>
+        </div>
+      </div>
+      <div class="col-3 col-md-3 unique-link">
+        <div class="row pe-0 me-0" style="margin-top: -12px;">
+          <p>{{uniqueLink}}<span class="ms-1" style="color: #3ecf88;">+89</span></p>
+        </div>
+        <div class="row">
+          <span>Unique Link</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Total Purpose -->
+  <div class="col-6 col-lg-2 total-purpose order-2 order-lg-4">
+    <div>
+      <h6>Total Purpose</h6>
+    </div>
+    <div>
+      <fa-icon [icon]="this.iconService.faLink"></fa-icon>
+      <span>{{totalPurpose}}</span>
+    </div>
+  </div>
+</div>

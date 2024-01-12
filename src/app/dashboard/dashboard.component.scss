@@ -1,0 +1,75 @@
+// Dashboard CSS for all screen resolutions
+.container-fluid {
+  background-color: #ffffff;
+  height: 100%;
+
+  // Header
+  .header {
+    border-bottom: 1.5px solid #e8eef0;
+
+    // 'Dashboard' heading
+    .dashboard-head {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #1c4980;
+      margin: 11.2px 0 10px 0;
+
+      h5 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+        line-height: 1.2;
+        padding: 0.4rem 0 0.5rem 1rem;
+        display: inline-flex;
+
+      }
+    }
+  }
+
+  // Dashboard body
+  .dashboard-body {
+    color: #1c4980;
+    min-height: 75vh;
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 10px;
+  }
+}
+
+// CSS for screen resolutions more than 576px
+@media (min-width: 576px) {
+
+  .container-fluid {
+    border-radius: 10px;
+  }
+}
+
+// CSS for screen resolutions less than 768px
+@media (max-width: 767.5px) {
+
+  //Header 
+  .header {
+    border-bottom: 2px solid #f9fafb;
+
+    // 'Dashboard' Heading
+    .dashboard-head {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1c4980;
+      padding: 0 8.75rem 0 1.25rem;
+
+      h5 {
+
+        // Sidebar button
+        .sidebar-btn {
+          margin: -8px 10px 0 -4px;
+          border: 0px solid blue;
+          background-color: #f2f8fe;
+          padding: 8px 11px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

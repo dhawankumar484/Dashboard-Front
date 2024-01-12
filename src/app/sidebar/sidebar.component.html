@@ -1,0 +1,98 @@
+<!-- Sidebar visible for screen less than 576px -->
+<div *ngIf="this.getScreenWidth<576;">
+  <div class="sidebar offcanvas offcanvas-start" style="justify-content:flex-start;" tabindex="-1" id="offcanvasNavbar"
+    aria-labelledby="offcanvasNavbarLabel">
+    <div class="offcanvas-header sidebar-cancel-btn">
+      <span class="offcanvas-title" id="offcanvasNavbar">Menu</span>
+      <button class="btn offcanvas-title" data-bs-dismiss="offcanvas" aria-label="Close">
+        <fa-icon [icon]="this.iconService.faTimes"></fa-icon>
+      </button>
+    </div>
+
+    <!-- Sidebar links visible for both 'USER' and 'ADMIN' user type -->
+    <div class="user-type" *ngIf="this.user==='USER' || this.user==='ADMIN'">
+
+      <ul class="navbar-nav">
+        <li class="mt-1">
+          <a routerLink="dashboard" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            <i class="d-inline mx-2 bi bi-columns-gap"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="mt-3">
+          <a routerLink="assessment" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            <fa-icon class="d-inline mx-2" [icon]="this.iconService.faPenToSquare" style="font-size: 16px;"></fa-icon>
+            <span>Assessment</span>
+          </a>
+        </li>
+        <li class="mt-3">
+          <a routerLink="my-library" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            <i class="d-inline mx-2 bi bi-question-square"></i>
+            <span>My Library</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sidebar links only visible for 'ADMIN' user type -->
+    <div class="row user-type-admin mt-4 mb-0" *ngIf="this.user=='ADMIN'">
+      <ul class="pt-4" style="border-top: 1.6px dashed #dedfe0;">
+        <li *ngIf="this.getScreenWidth<310" class="text-center">
+          <p class="badge badge-pill" style="float: none;">Admin</p>
+        </li>
+        <li>
+          <a routerLink="round-status" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            <i class="d-inline mx-2 bi bi-clipboard-data"></i>
+            <span>Round Status</span>
+            <p *ngIf="this.getScreenWidth>=310" class="badge badge-pill me-3 mt-1">Admin</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Sidebar visible for screen equal or greater than 576px -->
+<div *ngIf="this.getScreenWidth>=576">
+  <div class="col d-none d-sm-block sidebar py-4">
+
+    <!-- Sidebar links visible for both 'USER' and 'ADMIN' user type -->
+    <div class="user-type" *ngIf="this.user==='USER' || this.user==='ADMIN'">
+      <ul class="text-center">
+        <li class="text-center mt-1">
+          <a routerLink="dashboard" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            <i class="bi bi-columns-gap"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="text-center mt-3">
+          <a routerLink="assessment" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            <fa-icon [icon]="this.iconService.faPenToSquare" style="font-size: 16px;"></fa-icon>
+            <span>Assessment</span>
+          </a>
+        </li>
+        <li class="text-center mt-3">
+          <a routerLink="my-library" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            <i class="bi bi-question-square"></i>
+            <span>My Library</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Sidebar links only visible for 'ADMIN' user type -->
+    <div class="user-type-admin text-center mt-4 pt-3" *ngIf="this.user=='ADMIN'">
+      <div style="border-top: 1.6px dotted #BACBD5;">
+        <p class="badge badge-pill mb-3 mt-3">Admin</p>
+      </div>
+      <ul>
+        <li class="text-center px-2">
+          <a routerLink="round-status" [routerLinkActive]="'active'" class="list-group-item list-group-item-action">
+            <i class="bi bi-clipboard-data"></i>
+            <span>Round Status</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,182 @@
+<!-- My assessment Component-->
+<div class="container-fluid pb-3 ps-2">
+
+  <!-- Assessment Overview for screen less than 576px -->
+  <div class="collapse d-sm-none" id="collapseExample" ia-hidden="true">
+    <div class="card-body">
+      <app-assessment-overview></app-assessment-overview>
+    </div>
+  </div>
+
+  <!-- Assessment Overview for screen more than 576px -->
+  <div class="ms-2 ps-1 d-none d-sm-block">
+    <app-assessment-overview></app-assessment-overview>
+  </div>
+
+
+  <!-- 'My Assessments' header -->
+  <div class="row mt-4 mb-2 pt-3 header">
+    <h5>
+      <span class="my-assessment">My Assessment</span>
+
+      <!-- Assessment overview, filter and search buttons for screen less than 576px -->
+      <span class="ms-3 d-sm-none overview-btn" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="isCollapsed" (click)="isCollapsed = !isCollapsed"
+        aria-controls="collapseExample" [ngClass]="isCollapsed==true ? 'active-overview-btn' : 'inactive-overview-btn'" style="float: inline-end;">
+        <fa-icon [icon]="this.iconService.faChartSimple"></fa-icon>
+      </span>
+      <span class="px-2 d-sm-none filter-btn" style="float: inline-end;">
+        <fa-icon [icon]="this.iconService.faFilter"></fa-icon>
+      </span>
+      <span class="px-3 d-sm-none search-btn" style="float: inline-end;">
+        <fa-icon [icon]="this.iconService.faMagnifyingGlass"></fa-icon>
+      </span>
+    </h5>
+  </div>
+
+  <!-- Assessment cards -->
+  <div class="row assessment-cards">
+
+    <!-- New Assessment-->
+    <div class="col-12 col-md-6 col-lg-4 mb-3">
+      <div class="new-assessment text-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasform"
+        aria-controls="offcanvasnewAssessment">
+        <span>
+          <fa-icon [icon]="this.iconService.faPlus"></fa-icon>
+        </span>
+        <h6 class="mt-4">New Assessment</h6>
+        <p>From here you can add questions of multiple types like MCQs, subjective (text or paragraph)!</p>
+      </div>
+    </div>
+
+    <!-- Existing Assessments-->
+    <div *ngFor="let item of assessmentsArray; index as i" class="col-12 col-md-6 col-lg-4 mb-3">
+      <div class="assessment px-3 pb-2 pt-4">
+        <span class="main-icon">
+          <i class="bi bi-briefcase"></i>
+        </span>
+        <span class="more-option">
+          <fa-icon [icon]="this.iconService.faEllipsisVertical"></fa-icon>
+        </span>
+        <h6 class="mt-3 pt-1 mb-1">{{assessmentsArray[i].assessmentName}}</h6>
+        <p class="pb-3 assessment-date">
+          Job
+          <span class="fw-light mx-1" style="color: #DADCE0;"> | </span>
+          <i class="mx-1 bi bi-calendar-week"></i>
+          <span class="fw-light"> 20 Apr 2023</span>
+        </p>
+        <div class="card-footer row d-flex mt-3 pt-2 mb-1" style="color: #1c4980">
+          <div class="duration col-2 col-md-3 col-lg-2">
+            <div class="row duration-no">
+              <p>{{assessmentsArray[i].assessmentDuration}}</p>
+            </div>
+            <div class="row">
+              <span>Duration</span>
+            </div>
+          </div>
+          <div class="questions col-2">
+            <div class="questions-no row">
+              <p>00</p>
+            </div>
+            <div class="row">
+              <span>Questions</span>
+            </div>
+          </div>
+          <div class="share col-8 col-md-7 col-lg-8">
+            <span class="share-people ms-2">
+              LP
+            </span>
+            <span class="share-btn">
+              <fa-icon [icon]="this.iconService.faLink"></fa-icon>
+              Share
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- New Assessment form -->
+<div class="offcanvas offcanvas-bottom h-100 col-sm-8 col-lg-6 offset-sm-2 offset-lg-3" tabindex="-1" id="offcanvasform"
+  aria-labelledby="offcanvasnewAssessment">
+
+  <!-- Form header -->
+  <div class="offcanvas-header">
+    <span class="offcanvas-title" id="offcanvasform">Create new assessment</span>
+    <button class="btn offcanvas-title" data-bs-dismiss="offcanvas" aria-label="Close">
+      <fa-icon [icon]="this.iconService.faTimes"></fa-icon>
+    </button>
+  </div>
+
+  <!-- Form body -->
+  <div class="offcanvas-body">
+
+    <!-- Form -->
+    <form id="assessmentForm" class="form" (ngSubmit)="onFormSubmitted()" (keydown.enter)="$event.preventDefault()"
+      #newAssessmentForm="ngForm">
+      <div class="form-group">
+        <label for="assessmentName">Name of assessment</label>
+        <input type="text" class="form-control" name="assessmentName" placeholder="Type here" ngModel required>
+      </div>
+
+      <div class="form-group">
+        <label for="assessmentPurpose">Purpose of the test is</label>
+        <select class="custom-select form-control" style="appearance: auto;" name="assessmentPurpose" ngModel required>
+          <option value="" disabled hidden selected>Select</option>
+          <option>Purpose 1</option>
+          <option>Purpose 2</option>
+          <option>Purpose 3</option>
+          <option>Purpose 4</option>
+          <option>Purpose 5</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="assessmentDescription">Description</label>
+        <select class="custom-select form-control" style="appearance: auto;" name="assessmentDescription" ngModel
+          required>
+          <option value="" disabled hidden selected>Select</option>
+          <option>Description 1</option>
+          <option>Description 2</option>
+          <option>Description 3</option>
+          <option>Description 4</option>
+          <option>Description 5</option>
+        </select>
+      </div>
+
+      <div class="assessmentSkills form-group position-relative">
+        <label for="assessmentSkills">Skills</label>
+        <div class="skills-tag form-control" *ngIf="skills.length!==0">
+          <ul class="d-inline list-unstyled">
+            <li class="me-2 my-1" *ngFor="let skill of skills; index as i">
+              <span class="me-2">{{skill}}</span>
+              <fa-icon (click)="removeSkill(i)" [icon]="this.iconService.faTimes"></fa-icon>
+            </li>
+          </ul>
+        </div>
+        <input class="form-control" type="text" id="tagInput" name="assessmentSkills" placeholder="Type here"
+          #tagInput="ngModel" [ngClass]="skills.length!==0 ? 'active' : 'inactive'" ngModel>
+        <span class="add-skill-btn" [hidden]="tagInput.value==''" (click)="addSkill(tagInput.value)">
+          <fa-icon [icon]="this.iconService.faArrowRight"></fa-icon>
+        </span>
+      </div>
+
+      <div class="form-group">
+        <label for="assessmentDuration">Duration of assessment</label>
+        <input type="text" class="form-control" id="duration" name="assessmentDuration" placeholder="HH:MM:SS"
+          pattern="^(?:(?:([01]?\d|2[0-3]):)?([0-5]?\d):)?([0-5]?\d)$" #duration="ngModel" ngModel required>
+        <small class="text-danger mt-2" *ngIf="duration.invalid && duration.value!==''">
+          Please enter a valid time
+        </small>
+      </div>
+
+    </form>
+  </div>
+
+  <!-- Form footer and submit button -->
+  <div class="offcanvas-footer assessment-submit-btn">
+    <button type="submit" form="assessmentForm" class="btn btn-primary">Save</button>
+  </div>
+</div>

@@ -1,0 +1,166 @@
+// Assessment CSS for all screen resolutions
+.container-fluid {
+  background-color: #ffffff;
+  min-height: 100vh;
+
+  // Header
+  .header {
+    border-bottom: 1.5px solid #e8eef0;
+
+    // 'Assessment' Heading
+    .assess-head {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #1c4980;
+      margin: 8.28px 0 10.5px 0;
+
+      h5 {
+        margin-top: 0.5rem;
+        margin-bottom: 0.25rem;
+        font-weight: 600;
+        line-height: 1.22;
+        padding: 0.4rem 0 0.5rem 0;
+        display: inline-flex;
+
+      }
+    }
+
+    // Routers lists 
+    .assess-route {
+
+      ul {
+
+        li {
+          width: 50%;
+          border: none;
+
+          a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            color: #5879a1;
+
+          }
+
+          // Active router link
+          .active {
+            color: #2285e9;
+            border-bottom: 3.5px solid #0073E6;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+// CSS for screen resolutions more than 991px
+@media (min-width: 991.5px) {
+
+  .container-fluid {
+    min-width: 1264px;
+  }
+}
+
+// CSS for screen resolutions more than 767px
+@media (min-width: 767.5px) {
+
+  // 'Assessment' Heading
+  .assess-head {
+    border-right: 1.5px solid #e8eef0;
+  }
+
+  //Router lists
+  .assess-route {
+
+    padding: 17px 0 16.5px 0;
+    margin-top: 6px;
+
+    ul {
+      display: inline;
+      -moz-column-count: 2;
+      -webkit-column-count: 2;
+      column-count: 2;
+
+      li {
+        display: inline;
+
+        a {
+          padding: 0 0.05rem 23px 0rem;
+          margin: 0 19px 0 19px;
+
+        }
+      }
+    }
+  }
+}
+
+// CSS for screen resolutions more than 576px
+@media (min-width: 576px) {
+
+  .container-fluid {
+    border-radius: 10px;
+
+    .header {
+
+      // 'Assessment' heading
+      .assess-head {
+        width: 150px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #1c4980;
+        padding: 0 8.75rem 0 1.25rem;
+      }
+    }
+  }
+}
+
+// CSS for screen resolutions less than 768px
+@media (max-width: 767.5px) {
+
+  //Header 
+  .header {
+    border-bottom: 2px solid #f9fafb;
+
+    // 'Assessment' Heading
+    .assess-head {
+      font-size: 1.4rem;
+      font-weight: bold;
+      border-right: 0px;
+      color: #1c4980;
+      padding: 0 8.75rem 0 1.25rem;
+      border-right: 0px solid #e8eef0;
+
+      h5 {
+
+        // Sidebar button
+        .sidebar-btn {
+          margin: -8px 10px 0 -4px;
+          border: 0px solid blue;
+          background-color: #f2f8fe;
+          padding: 8px 11px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+    }
+
+    // Routers lists
+    .assess-route {
+      padding: 12.9px 0 12.9px 0;
+
+      ul {
+
+        li {
+          display: grid;
+          margin-bottom: -15px;
+
+          a {
+            padding-bottom: 16px;
+          }
+        }
+      }
+
+    }
+  }
+}

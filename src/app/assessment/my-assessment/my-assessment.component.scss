@@ -1,0 +1,392 @@
+// My Assessment CSS for all screen resolutions
+
+//My Assessment header
+.header {
+  h5 {
+    color: #1c4980;
+    font-size: 18px;
+  }
+
+  //Assessment overview, filter and search buttons
+  fa-icon{
+    cursor: pointer;
+  }
+
+  .active-overview-btn {
+    border: 1px solid #0073E6;
+    border-radius: 50%;
+    background-color: #F2F8FE;
+    color: #0073e6;
+    padding: 8px 11px 8px 11px;
+    margin-top: -9px;
+  }
+
+}
+
+// Assessment cards
+.assessment-cards {
+
+  // New Assessment
+  .new-assessment {
+    border: 1.35px dashed #dedfe0;
+    border-radius: 12px;
+    background-color: #f6f8fa;
+    padding: 44px 24px 8px 20px;
+    min-height: 206px;
+    cursor: pointer;
+
+    span {
+      border-radius: 50%;
+      font-size: 30px;
+      color: #0073e6;
+      background-color: #ffffff;
+      padding: 16px 20.5px 16px 20.5px;
+      margin-top: -10px;
+    }
+
+    h6 {
+      color: #1c4980;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 11px;
+    }
+
+    p {
+      font-size: 12px;
+      color: #1c4980;
+      font-weight: 500;
+      line-height: 15px;
+    }
+  }
+
+  // Existing Assessments
+  .assessment {
+    border: 1.35px solid #dedfe0;
+    border-radius: 12px;
+    background-color: #ffffff;
+
+    .main-icon {
+      border-radius: 11px;
+      font-size: 22px;
+      color: #6548EE;
+      background-color: #EBE8FD;
+      padding: 11px 13px 11px 13px;
+      margin-top: -10px;
+      -webkit-text-stroke: 0.4px;
+    }
+
+    .more-option {
+      border-radius: 11px;
+      font-size: 20px;
+      color: #1c4980;
+      float: inline-end;
+      margin-top: -8px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    h6 {
+      color: #1c4980;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .assessment-date {
+      font-size: 13.7px;
+      font-weight: 500;
+      color: #1c4980;
+      border-bottom: 1.6px dashed #dedfe0;
+      -webkit-text-stroke: 0.4px;
+
+      i {
+        font-size: 12px;
+      }
+
+      span {
+        font-size: 12px;
+        font-weight: 500;
+        color: #8DA4BF;
+      }
+    }
+
+    .card-footer {
+      margin-top: 5px;
+
+      .duration {
+        padding-right: 0px;
+        margin-right: 0px;
+        font-size: 12px;
+        font-weight: 600;
+
+        .duration-no {
+          margin-top: -11px;
+          height: 18px;
+
+          p {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+
+      }
+
+      .questions {
+        font-size: 12px;
+        font-weight: 600;
+
+        .questions-no {
+          margin-top: -11px;
+          height: 18px;
+          padding-right: 0px;
+          margin-right: 0px;
+
+          p {
+            font-size: 14px;
+            font-weight: 600;
+          }
+        }
+      }
+
+      .share {
+        margin-top: -8px;
+
+        .share-btn {
+          float: inline-end;
+          border: 1.4px solid #1c4980;
+          border-radius: 20px;
+          padding: 4px 8px;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+
+        .share-people {
+          float: inline-end;
+          background-color: #6548EE;
+          color: #ffffff;
+          font-weight: 700;
+          border-radius: 50%;
+          padding: 4px 6px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+
+// New Assessment form
+.offcanvas {
+  border: 1.35px solid #DADCE0;
+  border-radius: 10px;
+
+  // Form header
+  .offcanvas-header {
+    border-bottom: 1.35px solid #DADCE0;
+    color: #1C4980;
+    font-size: 17.5px;
+    font-weight: 600;
+    padding: 0 25px 0 25px;
+    min-height: 61px;
+
+    .btn {
+      color: #1C4980;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    .btn:hover {
+      color: #D63500;
+      background-color: #FBEBEA;
+      border-radius: 50%;
+    }
+  }
+
+  // Form body
+  .offcanvas-body {
+    padding: 20px 25px 2px 25px;
+
+    // Form
+    .form-group {
+      margin-bottom: 16px;
+
+      label {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1C4980;
+        margin-bottom: 4px;
+      }
+
+      input,
+      select {
+        border: 1.3px solid #DADCE0;
+        height: 46px;
+        color: #1C4980;
+        font-size: 14px;
+
+        option {
+          color: #1C4980;
+          height: 40px;
+        }
+      }
+
+      select,
+      input::placeholder {
+        color: #8DA4BF;
+      }
+
+      select,
+      input:-ms-input-placeholder {
+        color: #8DA4BF;
+      }
+
+      select,
+      input::-ms-input-placeholder {
+        color: #8DA4BF;
+      }
+
+    }
+
+    // Adding skill tags input input and button
+    .assessmentSkills {
+
+      .skills-tag {
+        border-bottom-right-radius: 0%;
+        border-bottom-left-radius: 0%;
+        border-bottom: none;
+        padding: 10px 15px;
+
+        li {
+          font-size: 12.8px;
+          font-weight: 500;
+          padding: 5px 10px 5px 10px;
+          color: #1c4980;
+          background-color: #DDEDFF;
+          border-radius: 25px;
+          display: inline-block;
+
+          fa-icon {
+            cursor: pointer;
+          }
+
+          fa-icon:hover {
+            color: #D63500;
+          }
+        }
+      }
+
+      input {
+        padding: 0 48px 0 12px
+      }
+
+      .active {
+        border-top-right-radius: 0%;
+        border-top-left-radius: 0%;
+      }
+
+      .add-skill-btn {
+        position: absolute;
+        right: 12px;
+        bottom: 7.5px;
+        background-color: #0073E6;
+        border-radius: 50%;
+        padding: 4px 8px 4px 8px;
+        color: white;
+        cursor: pointer;
+      }
+
+      .add-skill-btn:hover {
+        font-size: 17px;
+        padding: 5px 9px 5px 9px;
+        bottom: 6px;
+        right: 10.5px;
+      }
+    }
+  }
+
+  // Form footer and submit button
+  .assessment-submit-btn {
+    padding: 10px 24px 10px 24px;
+    min-height: 60px;
+    border-top: 1.35px solid #DADCE0;
+
+    button {
+      background-color: #0073E6;
+      color: #ffffff;
+      border: none;
+      height: 40px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+  }
+}
+
+// Assessment CSS for screen resolutions more than 767px and less than 884px
+@media only screen and (min-width: 767.5px) and (max-width: 883.5px) {
+
+  .assessment-cards {
+
+    // New Assessment
+    .new-assessment {
+      padding: 39px 24px 0px 24px;
+    }
+  }
+}
+
+// CSS for screen resolutions less than 380px
+@media (max-width: 380px) {
+
+  //Duration
+  .duration {
+    width: 60px;
+  }
+
+  //Question
+  .questions {
+    width: 60px;
+  }
+
+  //Share
+  .share {
+    width: 230rem;
+  }
+}
+
+// CSS for screen resolutions less than 310px
+@media (max-width: 309px) {
+
+  //My Assessment header
+  .header {
+    h5 {
+
+      .my-assessment {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      // Assessment overview, filter and search buttons
+      fa-icon {
+        margin-top: 10px;
+        font-size: 15px;
+      }
+    }
+
+  }
+
+  //Share
+  .share {
+    margin-top: 8px !important;
+
+    .share-btn {
+      font-size: 12px !important;
+      padding: 2px 5px !important;
+    }
+
+    .share-people {
+      padding: 3px 5px !important;
+      font-size: 11px !important;
+    }
+  }
+
+}
