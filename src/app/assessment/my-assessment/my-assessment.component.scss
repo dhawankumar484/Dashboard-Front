@@ -152,7 +152,7 @@
 
         .share-btn {
           float: inline-end;
-          border: 1.4px solid #1c4980;
+          border: 1.35px solid #1c4980;
           border-radius: 20px;
           padding: 4px 8px;
           font-size: 14px;
@@ -168,6 +168,7 @@
           border-radius: 50%;
           padding: 4px 6px;
           font-size: 13px;
+          margin-top: 1px;
         }
       }
     }
@@ -331,6 +332,27 @@
     .new-assessment {
       padding: 39px 24px 0px 24px;
     }
+    
+    .assessment {
+
+      .card-footer{
+        
+        .questions {
+          margin-right: 7px;
+          margin-left: -7px;
+        }
+
+        .share {
+  
+          .share-btn {
+            padding: 4px 7px;
+            font-size: 13px;
+          }
+        }
+      }
+      
+    }
+    
   }
 }
 
@@ -350,6 +372,11 @@
   //Share
   .share {
     width: 230rem;
+
+    .share-btn {
+      padding: 4px 7px !important;
+      font-size: 12px !important;
+    }
   }
 }
 
@@ -380,7 +407,7 @@
 
     .share-btn {
       font-size: 12px !important;
-      padding: 2px 5px !important;
+      padding: 3px 6px !important;
     }
 
     .share-people {
