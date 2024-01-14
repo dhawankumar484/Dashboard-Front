@@ -359,6 +359,17 @@
 // CSS for screen resolutions less than 380px
 @media (max-width: 380px) {
 
+  .header {
+    h5 {
+
+      // Assessment overview, filter and search buttons
+      fa-icon {
+        font-size: 15px;
+      }
+    }
+
+  }
+
   //Duration
   .duration {
     width: 60px;
@@ -380,8 +391,8 @@
   }
 }
 
-// CSS for screen resolutions less than 310px
-@media (max-width: 309px) {
+// CSS for screen resolutions less than 311px
+@media (max-width: 310px) {
 
   //My Assessment header
   .header {
